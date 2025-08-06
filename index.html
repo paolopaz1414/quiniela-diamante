@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiniela Diamante</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+  <script src="https://www.paypal.com/sdk/js?client-id=YOUR_PAYPAL_CLIENT_ID&currency=MXN"></script>
+</head>
+<body>
+  <div id="app" class="container">
+    <h1>Quiniela Diamante</h1>
+    <div id="login-section">
+      <button id="login-btn">Ingresar con Google</button>
+    </div>
+
+    <div id="quiniela-section" class="hidden">
+      <h2>Pronósticos Semanales</h2>
+      <form id="quiniela-form">
+        <div id="matches"></div>
+        <button type="submit">Guardar Pronóstico</button>
+      </form>
+    </div>
+
+    <div id="pago-section" class="hidden">
+      <h2>Pago del Ticket - $50 MXN</h2>
+      <div>
+        <button id="pay-oxxo">Pagar en OXXO</button>
+        <button id="pay-transfer">Transferencia</button>
+        <div id="paypal-button-container"></div>
+      </div>
+      <div id="metodo-detalle"></div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
